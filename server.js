@@ -174,6 +174,7 @@ app.listen(PORT, "0.0.0.0.", () => {
     console.log("🌦️ Weather Monitoring Dashboard");
     console.log("------------------------------------");
     console.log(`Server running on 0.0.0.0:${PORT}`);
+    console.log(`Server running on https://github.com/knowledgeskills30-max/Weather-Monitoring-Dashboard-API.git ${PORT}`);
     console.log("------------------------------------");
 
 });
