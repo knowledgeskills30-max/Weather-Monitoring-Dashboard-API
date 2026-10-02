@@ -168,13 +168,14 @@ START SERVER
 ========================================
 */
 
-app.listen(PORT, "0.0.0.0.", () => {
+app.listen(PORT, "0.0.0.0", () => {
 
     console.log("------------------------------------");
     console.log("🌦️ Weather Monitoring Dashboard");
     console.log("------------------------------------");
-    console.log(`Server running on 0.0.0.0:${PORT}`);
-    console.log(`Server running on http://localhost:3000 ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on "0.0.0.0" ${PORT}`);
+    console.log(`Open: http://localhost:${PORT}`);
     console.log("------------------------------------");
 
 });
