@@ -131,18 +131,28 @@ async function getWeather() {
             "maxTemperature"
         ).textContent =
             Math.round(data.maxTemperature);
+        function formatLocalTime(timestamp, timezoneOffset) {
+    const date = new Date((timestamp + timezoneOffset) * 1000);
 
+    return date.toLocaleTimeString("en-US", {
+        timeZone: "UTC",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+    });
+}
 
         document.getElementById(
             "sunrise"
         ).textContent =
-            data.sunrise;
+            formatLocalTime(data.sunrise, data.timezone)
 
 
         document.getElementById(
             "sunset"
         ).textContent =
-            data.sunset;
+            formatLocalTime(data.sunset, data.timezone)
 
 
         document.getElementById(
