@@ -103,13 +103,9 @@ app.get("/api/weather", async (req, res) => {
 
             visibility: data.visibility,
 
-            sunrise: new Date(
-                data.sys.sunrise * 1000
-            ).toLocaleTimeString(),
-
-            sunset: new Date(
-                data.sys.sunset * 1000
-            ).toLocaleTimeString(),
+           sunrise: data.sys.sunrise,
+            sunset: data.sys.sunset,
+            timezone: data.timezone,
 
             updatedAt: new Date().toLocaleString()
         };
