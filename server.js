@@ -107,7 +107,10 @@ app.get("/api/weather", async (req, res) => {
             sunset: data.sys.sunset,
             timezone: data.timezone,
 
-            updatedAt: new Date().toLocaleString()
+            updatedAt: new Date().toLocaleString("en-IN", {
+            timeZone: "Asia/Kolkata",
+            hour12: true
+            })
         };
 
         res.json(weatherData);
